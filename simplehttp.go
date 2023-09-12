@@ -94,7 +94,7 @@ type Response struct {
 	http.Response
 }
 
-func (r *Response) Btyes() ([]byte, error) {
+func (r *Response) Bytes() ([]byte, error) {
 	b, err := io.ReadAll(r.Body)
 	_ = r.Body.Close()
 	return b, err
